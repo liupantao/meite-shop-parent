@@ -1,11 +1,12 @@
-package com.mayikt.member.impl;
+package com.mayikt.member.service.impl;
 
 import com.mayike.weixin.entity.AppEntity;
 import com.mayikt.member.feign.WeixinAppServiceFeign;
 import com.mayikt.member.service.MemberService;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -17,15 +18,18 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 public class MemberServiceImpl implements MemberService {
-    
+
+
+
     @Autowired
     private WeixinAppServiceFeign weixinAppServiceFeign;
     
     
     @Override
-    @GetMapping("/getMember")
-    public AppEntity MemberInvokeWeixin() {
-        String appInfo = weixinAppServiceFeign.getAppInfo();
-        return new AppEntity("233","000");
+    public AppEntity MemberInvokeWeixin(String userName) {
+        System.out.println("-----------开始执行会员调用微信");
+        AppEntity appInfo = weixinAppServiceFeign.getAppInfo(userName);
+        System.out.println("-----------结束会员调用微信");
+        return appInfo;
     }
 }

@@ -16,12 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class AppServiceImpl implements AppService {
 
 	@Override
-    //@RequestMapping(value="/user/name", method= RequestMethod.GET)
-	public String getAppInfo() {
-		// TODO Auto-generated method stub
-		AppEntity appEntity = new AppEntity("123", "APP-01");
-		String s = appEntity.toString();
-		return s;
+	public AppEntity getAppInfo(String name) {
+		System.out.println("----------微信信息接口---");
+		AppEntity appEntity = new AppEntity("123", name);
+		return appEntity;
 	}
 
 }
