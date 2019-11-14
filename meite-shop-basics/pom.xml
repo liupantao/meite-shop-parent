@@ -9,5 +9,6 @@
   <packaging>pom</packaging>
   <modules>
   	<module>meite-shop-basics-eureka</module>
+      <module>meite-shop-basics-zuul</module>
   </modules>
 </project>
