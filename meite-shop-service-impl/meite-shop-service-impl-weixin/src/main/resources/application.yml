@@ -6,9 +6,10 @@ logging:
 wx:
   mp:
     configs:
-      - appId: wx5c43fde3c9733d9e #（一个公众号的appid）
-        secret: b8b217126c33a5fb7074927d5e72a81a #（公众号的appsecret）
+      - appId: wx74671a937aeccba9 #（一个公众号的appid）
+        secret: 05b1a55a3e07a0407b31020770d7af80 #（公众号的appsecret）
         token: mayikt #（接口配置里的Token值）
+        aesKey: rIuEhnuqVTbVIS0RKQrz1bny4qHkcZOhSEvE7trzeEb  #（接口配置里的EncodingAESKey值）
 ###服务注册到eureka地址
 eureka:
   client:
