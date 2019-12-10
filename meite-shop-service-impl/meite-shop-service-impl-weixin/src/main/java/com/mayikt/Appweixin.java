@@ -1,4 +1,4 @@
-package com.mayikt.member;
+package com.mayikt;
 
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import com.spring4all.swagger.EnableSwagger2Doc;
@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * @ClassName AppMember
+ * @ClassName Appweixin
  * @Description: TODO
  * @Author liupantao
  * @Date 2019/11/12
@@ -16,11 +16,13 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  **/
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients
 @EnableSwagger2Doc
 @EnableApolloConfig
-public class AppMember {
-     public static  void main(String[] args){
-         SpringApplication.run(AppMember.class,args);
-     }
+@EnableFeignClients
+public class Appweixin {
+    public static void main(String[] args) {
+
+        SpringApplication.run(Appweixin.class, args);
+
+    }
 }

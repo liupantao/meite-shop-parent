@@ -15,8 +15,7 @@ eureka:
   client:
     service-url:
            defaultZone: http://localhost:8100/eureka        
-server:
-  port: 8200
+
 
   
 mayikt: 
@@ -32,23 +31,20 @@ mayikt:
           message: 您的消息，我们已经收到,会及时回复给您的!
   
 spring:
-  application:
-    name: app-mayikt-weixin
   redis:
-    host: 127.0.0.1
-    password: 123456
+    host: 192.168.79.1
     port: 6379
     pool:
       max-idle: 100
       min-idle: 1
       max-active: 1000
       max-wait: -1
-###数据库相关连接      
- # datasource:
-    #  username: root
-    # password: root
-    # driver-class-name: com.mysql.jdbc.Driver
-      #url: jdbc:mysql://127.0.0.1:3306/meite_weixin
+###数据库相关连接
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/meite_weixin
 
 
 ####swagger相关配置

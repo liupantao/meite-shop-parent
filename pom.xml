@@ -10,6 +10,7 @@
   	<module>meite-shop-service-impl</module>
   	<module>meite-shop-common</module>
   	<module>meite-shop-portal</module>
+      <module>meite-shop-api-dto</module>
   </modules>
   
   
@@ -91,6 +92,12 @@
 			<version>1.2.0</version>
 		</dependency>
 
+		<!--项目依赖-->
+		<dependency>
+			<groupId>com.mayikt</groupId>
+			<artifactId>meite-shop-common-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<!-- 管理依赖 -->
 	<dependencyManagement>
