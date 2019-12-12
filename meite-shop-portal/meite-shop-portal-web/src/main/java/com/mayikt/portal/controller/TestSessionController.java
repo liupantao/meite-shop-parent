@@ -4,6 +4,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Primary;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +32,7 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @Slf4j
 public class TestSessionController {
-	@Value("${server.port}")
+	@Value("${com.xxl.sso.server.port}")
 	private String serverPort;
 
 	// 创建session 会话
@@ -44,6 +51,9 @@ public class TestSessionController {
 		log.info(">>>>>>>获取Session sessionid:{}", session.getId());
 		Object value = session.getAttribute("name");
 		return value + ",端口号:" + serverPort;
+	}
+	public static void main(String[] args) {
+		SpringApplication.run(TestSessionController.class, args);
 	}
 
 }

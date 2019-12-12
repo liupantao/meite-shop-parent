@@ -10,5 +10,6 @@
   <modules>
   	<module>meite-shop-basics-eureka</module>
       <module>meite-shop-basics-zuul</module>
+      <module>meite-shop-basic-xxl-sso-com.xxl.sso.server</module>
   </modules>
 </project>

@@ -9,10 +9,10 @@
   
   
   <dependencies>
-		<!--SpringCloud eureka-server -->
+		<!--SpringCloud eureka-com.xxl.sso.server -->
 	   <dependency> 
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-com.xxl.sso.server</artifactId>
 		</dependency> 
 	</dependencies>
 </project>
